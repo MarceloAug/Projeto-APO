@@ -4,10 +4,12 @@
 //login
 Route::get('/login','LoginController@form');
 Route::get('/login/register','LoginController@form_register');
+Route::post('/login/autentificar','LoginController@login');
 
 //usuarios 
 Route::get('/usuarios/adicionar','usersController@form_adicionar');
 Route::get('/usuarios/listar','usersController@list');
+Route::post('/users/insert','usersController@insert');
 
 
 

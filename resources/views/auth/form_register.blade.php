@@ -21,40 +21,30 @@
     <!-- Global site tag (gtag.js) - Google Analytics-->
    
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      // Shared ID
-      gtag('config', 'UA-118965717-3');
-      // Bootstrap ID
-      gtag('config', 'UA-118965717-5');
-    </script>
   </head>
   <body class="app flex-row align-items-center">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-6">
           <div class="card mx-4">
+		  	<form action="/users/insert" method="POST">
             <div class="card-body p-4">
               <h1>Register</h1>
-              <p class="text-muted">Create your account</p>
+			  <p class="text-muted">Create your account</p>
+			  <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
                     <i class="icon-user"></i>
                   </span>
                 </div>
-                <input class="form-control" type="text" placeholder="Username">
+                <input class="form-control" type="text" placeholder="Username" name="name">
               </div>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text">@</span>
                 </div>
-                <input class="form-control" type="text" placeholder="Email">
+                <input class="form-control" type="text" placeholder="Email" name="email">
               </div>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -62,7 +52,7 @@
                     <i class="icon-lock"></i>
                   </span>
                 </div>
-                <input class="form-control" type="password" placeholder="Password">
+                <input class="form-control" type="password" placeholder="Password" name="password">
               </div>
               <div class="input-group mb-4">
                 <div class="input-group-prepend">
@@ -72,9 +62,10 @@
                 </div>
                 <input class="form-control" type="password" placeholder="Repeat password">
               </div>
-              <button class="btn btn-block btn-success" type="button">Create Account</button>
+              <button class="btn btn-block btn-success" type="submit">Create Account</button>
             </div>
-          </div>
+		  </div>
+		</form>
         </div>
       </div>
     </div>
