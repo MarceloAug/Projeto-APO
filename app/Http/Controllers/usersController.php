@@ -8,7 +8,11 @@ use Hash;
 class usersController extends Controller
 {
 
-    
+    public function __construct()
+    {
+        $this->middleware('autorizador');
+    }
+
 
     public function form_adicionar(){
         return view('users.usersAdd');

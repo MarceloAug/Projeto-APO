@@ -5,6 +5,9 @@
 Route::get('/login','LoginController@form');
 Route::get('/login/register','LoginController@form_register');
 Route::post('/login/autentificar','LoginController@login');
+Route::post('/login/insert','LoginController@insert');
+Route::get('/logout','LoginController@logout');
+
 
 //usuarios 
 Route::get('/usuarios/adicionar','usersController@form_adicionar');

@@ -20,14 +20,15 @@
 		<link href="/css/admin.css" rel="stylesheet">
 		<link href="/css/pace.min.css" rel="stylesheet">
 	</head>
-  	<body class="app teste header-fixed sidebar-fixed  sidebar-lg-show pace-done ">
+  	<body class="app  header-fixed sidebar-fixed  sidebar-lg-show pace-done ">
 		<header class="app-header navbar">
 			<button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<a class="navbar-brand" href="#">
-				
-			</a>
+			<a class="navbar-brand" href="#"></a>
+			<ul class="nav navbar-nav ml-auto">
+				<a href="/logout"><i class="fa fa-lock"></i> Logout</a>
+			</ul>
 		</header>
     <div class="app-body">
 		<div class="sidebar">
