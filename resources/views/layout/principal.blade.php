@@ -33,21 +33,33 @@
     <div class="app-body">
 		<div class="sidebar">
 			<nav class="sidebar-nav">
-			<ul class="nav">
-				<li class="nav-item nav-dropdown">
-				<a class="nav-link nav-dropdown-toggle" href="#">
-					<i class="nav-icon icon-puzzle"></i>Usuários</a>
-				<ul class="nav-dropdown-items">
-					<li class="nav-item">
-					<a class="nav-link" href="/usuarios/adicionar">
-						<i class="nav-icon icon-puzzle"></i> Adicionar</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="/usuarios/listar">
-						<i class="nav-icon icon-puzzle"></i> Listar</a>
+				<ul class="nav">
+					<li class="nav-item nav-dropdown">
+							<a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-user-o fa-lg mt-1"></i>Usuários</a>
+							<ul class="nav-dropdown-items">
+						<li class="nav-item">
+							<a class="nav-link" href="/usuarios/adicionar"><i class="fa fa-address-book-o fa-lg mt-1"></i> Adicionar</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/usuarios/listar">
+							<i class="fa fa-list fa-lg mt-1"></i> Listar</a>
+						</li>
 					</li>
 				</ul>
-				</li>
+
+				<ul class="nav">
+					<li class="nav-item nav-dropdown">
+							<a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-home fa-lg mt-1"></i>Pousadas</a>
+							<ul class="nav-dropdown-items">
+						<li class="nav-item">
+							<a class="nav-link" href="/pousadas/adicionar"><i class="fa fa-address-book-o fa-lg mt-1"></i> Adicionar</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/pousadas/lista">
+							<i class="fa fa-list fa-lg mt-1"></i> Listar</a>
+						</li>
+					</li>
+				</ul>
 			</nav>
 			<button class="sidebar-minimizer brand-minimizer" type="button"></button>
 		</div>
