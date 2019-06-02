@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
+use App\Repositories\ImageRepository;
 use App\Pousada;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Http\Request;
-use App\Http\Requests\PousadaRequest;
+
 
 
 class PousadasController extends Controller
@@ -20,6 +21,10 @@ class PousadasController extends Controller
         return view('pousadas.pousadasAdd');
     }
 
+    public function display($id){
+        $pousada = Pousada::find($id);
+        return view('pousadas.pousadasDisplay')->with('pousada', $pousada);
+    }
 
     public function form_update($id){
         $pousadas = Pousada::find($id);
@@ -34,13 +39,19 @@ class PousadasController extends Controller
     }
 
 
-    public function insert(PousadaRequest $request){
-        Pousada::create($request->all());
+    public function insert(Request $request,ImageRepository $image){
+    
+        $pousada = Pousada::create($request->all());
+
+        if($request->hasFile('imagem') && $request->file('imagem')->isValid()){
+            $image->saveImagePousada($request->file('imagem'),$pousada->id,$pousada->nome);
+        }
         return redirect('/pousadas/lista')->withInput();
     }
 
     public function list(){
-        $pousadas = Pousada::all();//variavel que recebe as pousadas
+        $totalPag = 10;
+        $pousadas = Pousada::paginate($totalPag);//variavel que recebe as pousadas
         return view('pousadas.pousadasList')->with('pousadas', $pousadas);///retorna para tela de listagem de pousadas
     }
 
@@ -50,8 +61,11 @@ class PousadasController extends Controller
 
     }
 
-    public function Update(PousadaRequest $request){
+    public function Update(Request $request,ImageRepository $image){
         Pousada::where('id', $request->id)->update(request()->except(['_token']));
+        if($request->hasFile('imagem') && $request->file('imagem')->isValid()){
+            $image->saveImagePousada($request->file('imagem'),$request->id,$request->nome);
+        }
         return redirect()->action('PousadasController@list');
     }
 }

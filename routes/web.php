@@ -21,6 +21,7 @@ Route::get('/pousadas/adicionar','PousadasController@form_adicionar');
 Route::post('/pousadas/insert','PousadasController@insert');
 Route::get('/pousadas/lista','PousadasController@list');
 Route::get('/pousadas/remove/{id}', 'PousadasController@delete');
+Route::get('/pousadas/display/{id}', 'PousadasController@display');
 Route::get('/pousadas/FormUpdate/{id}','PousadasController@form_update');
 Route::post('/pousadas/update', 'PousadasController@update');
 Route::get('/pousadas/filtra', 'PousadasController@filter');

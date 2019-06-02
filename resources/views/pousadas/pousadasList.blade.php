@@ -31,55 +31,32 @@
                         </div>
                     </div>
                 </form>
-                <table class="table table-responsive-sm table-striped">
+                <table class="table table-striped">
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Nome</th>
                             <th>Valor</th>
                             <th>Endereco</th>
-                            <th>Acões</th>
+                            <th></th>
+                            <th></th>
+                           
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($pousadas as $e)
                             <tr>
-                                <td> {{$e->id}} </td>
+                                <td><a href="/pousadas/display/{{$e->id}}">{{$e->id}}</a></td>
                                 <td> {{$e->nome}} </td>
                                 <td> {{$e->valor}} </td>
                                 <td> {{$e->endereco}} </td>
-                                <td>
-                                    <a href="/pousadas/remove/{{$e->id}}">
-                                        <span class="glyphicon glyphicon-trash">Remover</span>
-                                    </a>
-                                    <a href="/pousadas/FormUpdate/{{$e->id}}">
-                                        <i class="glyphicon glyphicon-pencil">Editar</i>
-                                    </a>
-                                </td>
+                                <td ><a href="/pousadas/remove/{{$e->id}}"><i class="fa fa-trash fa-lg mt-2"></i></a></td>
+                                <td ><a href="/pousadas/FormUpdate/{{$e->id}}"><i class="fa fa-edit fa-lg mt-2"></i></a></td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
-                <ul class="pagination">
-                    <li class="page-item">
-                    <a class="page-link" href="#">Prev</a>
-                    </li>
-                    <li class="page-item active">
-                    <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                    <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                    <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                    <a class="page-link" href="#">4</a>
-                    </li>
-                    <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
-                    </li>
-                </ul>
+                    {{ $pousadas->links() }}
             </div>
         </div>
     </div>

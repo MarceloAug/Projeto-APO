@@ -11,7 +11,7 @@
     <div class="card">
         <div class="card-body">
          
-        <form action="/pousadas/update" method="POST">
+        <form action="/pousadas/update" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="_token" value="{{ csrf_token() }}" />
             <input type="hidden" name="id" value="{{$pousadas->id}}" />
           
@@ -50,7 +50,7 @@
             <div class="row">
                 <div class="form-group col-sm-3">
                     <label for="street">Imagem </label>
-                    <input required class="form-control" id="imagem" type="text" placeholder="imagem" name="imagem" value="{{$pousadas->imagem}}">
+                    <input required class="form-control" id="imagem" type="file" placeholder="imagem" name="imagem" value="{{$pousadas->imagem}}">
                 </div>
 
                 <div class="form-group col-sm-3">

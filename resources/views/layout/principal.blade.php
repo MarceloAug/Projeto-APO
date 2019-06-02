@@ -80,13 +80,9 @@
     </div>
     <footer class="app-footer">
       <div>
-        <a href="https://coreui.io">CoreUI</a>
-        <span>&copy; 2018 creativeLabs.</span>
+        <span>Vagan &copy; 2018 </span>
       </div>
-      <div class="ml-auto">
-        <span>Powered by</span>
-        <a href="https://coreui.io">CoreUI</a>
-      </div>
+     
     </footer>
     <!-- CoreUI and necessary plugins-->
     <script src="/js/vendor/jquery.min.js"></script>
