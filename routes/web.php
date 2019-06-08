@@ -27,6 +27,12 @@ Route::post('/pousadas/update', 'PousadasController@update');
 Route::get('/pousadas/filtra', 'PousadasController@filter');
 
 
+Route::get('/index', 'SiteController@index');
+
+
+
+
+
 
 /*
 |--------------------------------------------------------------------------

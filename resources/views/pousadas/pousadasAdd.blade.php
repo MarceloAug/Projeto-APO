@@ -58,10 +58,15 @@
                         <label for="dormitorios">Dormitorios</label>
                         <input required class="form-control" name="dormitorios" id="dormitorios" type="number" placeholder="dormitorios"  value="{{old('dormitorios')}}">
                     </div>
+
+                    <div class="form-group col-sm-3">
+                        <label for="totalHospedes">total de hospedes</label>
+                        <input required class="form-control" name="totalHospedes" id="totalHospedes" type="number" placeholder="total Hospedes"  value="{{old('totalHospedes')}}">
+                    </div>
                 </div>
 
                 <div class="form-group col-sm-3">
-                    <label for="street">Observações</label>
+                    <label for="observacoes">Observações</label>
                     <textarea required name="observacoes" rows="7" cols="80">{{old('observacoes')}}</textarea>
                 </div>
                 
