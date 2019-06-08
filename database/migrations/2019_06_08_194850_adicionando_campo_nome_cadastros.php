@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriaTableHospedagens extends Migration
+class AdicionandoCampoNomeCadastros extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,8 @@ class CriaTableHospedagens extends Migration
      */
     public function up()
     {
-        Schema::create('Hospedagens', function (Blueprint $table) {
-            $table->increments('id');
-            $table->date('periodoDE');
-            $table->date('periodoAte');
-            $table->timestamps();
+        Schema::table('cadastros', function($table) {
+            $table->string('nome',80);
         });
     }
 
@@ -28,6 +25,8 @@ class CriaTableHospedagens extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Hospedagens');
+        Schema::table('cadastros', function($table) {
+            $table->dropColumn('nome');
+        });
     }
 }

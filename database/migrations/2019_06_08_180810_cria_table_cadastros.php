@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriaTablePousadas extends Migration
+class CriaTableCadastros extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,16 @@ class CriaTablePousadas extends Migration
      */
     public function up()
     {
-        Schema::create('pousada', function (Blueprint $table){
+        Schema::create('cadastros', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nome', 80);
-            $table->decimal('valor', 8, 2);
-            $table->integer('dormitorios');
+            $table->string('email',40);
+            $table->string('cpf',20)->unique();
             $table->string('endereco',50);
-            $table->string('estado',50);
+            $table->string('cep',12);
             $table->string('cidade',50);
             $table->string('bairro',50);
-            $table->string('observacoes',255);
-            $table->string('cep',12);
-            $table->string('imagem',30);
+            $table->string('estado',50);
+            $table->string('cartaoCredito',50);
             $table->timestamps();
         });
     }
@@ -36,6 +34,6 @@ class CriaTablePousadas extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pousada');
+        Schema::dropIfExists('cadastros');
     }
 }
