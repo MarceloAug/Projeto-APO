@@ -28,6 +28,9 @@ Route::get('/pousadas/filtra', 'PousadasController@filter');
 
 
 Route::get('/index', 'SiteController@index');
+Route::get('/index/filtra', 'SiteController@filter');
+Route::get('/index/dadosCompra/{id}', 'SiteController@FormCompra');
+
 
 
 
