@@ -16,7 +16,7 @@ class CriaTableCadastros extends Migration
         Schema::create('cadastros', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('email',40);
-            $table->string('cpf',20)->unique();
+            $table->string('cpf',20);
             $table->string('endereco',50);
             $table->string('cep',12);
             $table->string('cidade',50);

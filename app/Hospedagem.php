@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Hospedagem extends Model
 {
-    protected $table = 'hospedagems';
+    protected $table = 'hospedagens';
 
-    protected $fillable = ['pousada_Id', 'pedido_Id', 'periodoDe','periodoAte'];
+    protected $fillable = ['pousada_Id', 'pedido_Id','cadastro_Id', 'periodoDe','periodoAte'];
 
     public function pousada()
     {

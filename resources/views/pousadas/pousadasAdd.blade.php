@@ -73,7 +73,7 @@
             </div>
 
             <div class="card-footer">
-                <button class="btn btn-sm btn-primary" type="submit"><i class="fa fa-dot-circle-o"></i> Adicionar</button>
+                <button class="btn btn-block btn-ghost-secondary active" type="submit"><i class="fa fa-dot-circle-o"></i> Adicionar</button>
             </div>
 
             </form>

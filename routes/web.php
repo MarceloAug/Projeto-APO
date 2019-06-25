@@ -26,10 +26,11 @@ Route::get('/pousadas/FormUpdate/{id}','PousadasController@form_update');
 Route::post('/pousadas/update', 'PousadasController@update');
 Route::get('/pousadas/filtra', 'PousadasController@filter');
 
-
+//site
 Route::get('/index', 'SiteController@index');
 Route::get('/index/filtra', 'SiteController@filter');
 Route::get('/index/dadosCompra/{id}', 'SiteController@FormCompra');
+Route::post('/index/confirmacaoReserva', 'SiteController@Confirm');
 
 
 

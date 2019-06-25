@@ -17,6 +17,16 @@
 		<link href="/css/font-awesome.min.css" rel="stylesheet">
 		<link href="/css/simple-line-icons.css" rel="stylesheet">
 		<link href="/css/demo.css" rel="stylesheet" />
+		<link href="/css/iziToast.min.css " rel="stylesheet">
+		<script src="/js/iziToast.min.js" type="text/javascript"></script>
+		<script src="/js/jquery.min.js" type="text/javascript"></script>
+        <script src="/js/jquery.mask.js" type="text/javascript"></script>
+        <script src="/js/popper.min.js" type="text/javascript"></script>
+        <script src="/js/bootstrap-material-design.min.js" type="text/javascript"></script>
+        <script src="/js/moment.min.js"></script>
+        <script src="/js/bootstrap-datetimepicker.js" type="text/javascript"></script>
+        <script src="/js/nouislider.min.js" type="text/javascript"></script>
+        <script src="/js/material-kit.js?v=2.0.5" type="text/javascript"></script>
 	</head>
 
 	<body class="index-page sidebar-collapse">
@@ -64,7 +74,7 @@
 								<div class="col-lg-12 col-sm-4">
 									<div class="form-group bmd-form-group">
 										<div class="input-group">
-											<input type="text" class="form-control" placeholder="Filtre a localidade" name="localidade">
+											<input  style="color: white;" type="text" class="form-control" placeholder="Filtre a localidade" name="localidade">
 										</div>
 										<!-- <div class="input-group">
 											<input type="text" class="form-control datetimepicker"  placeholder="Data inicial">
@@ -111,12 +121,6 @@
                 </div>
             </div>
         </footer>
-        <script src="/js/jquery.min.js" type="text/javascript"></script>
-        <script src="/js/popper.min.js" type="text/javascript"></script>
-        <script src="/js/bootstrap-material-design.min.js" type="text/javascript"></script>
-        <script src="/js/moment.min.js"></script>
-        <script src="/js/bootstrap-datetimepicker.js" type="text/javascript"></script>
-        <script src="/js/nouislider.min.js" type="text/javascript"></script>
-        <script src="/js/material-kit.js?v=2.0.5" type="text/javascript"></script>
+      
     </body>
 </html>
