@@ -15,6 +15,13 @@
 		<link href="/css/flag-icon.min.css" rel="stylesheet">
 		<link href="/css/font-awesome.min.css" rel="stylesheet">
 		<link href="/css/simple-line-icons.css" rel="stylesheet">
+		<script src="/js/jquery.min.js" type="text/javascript"></script>
+        <script src="/js/jquery.mask.js" type="text/javascript"></script>
+		<script src="/js/vendor//popper.min.js"></script>
+		<script src="/js/vendor/bootstrap.min.js"></script>
+		<script src="/js/vendor/pace.min.js"></script>
+		<script src="/js/vendor/perfect-scrollbar.min.js"></script>
+		<script src="/js/vendor/coreui.min.js"></script>
 		<!-- Main styles for this application-->
 		<link href="/css/style.css" rel="stylesheet">
 		<link href="/css/admin.css" rel="stylesheet">
@@ -60,6 +67,34 @@
 						</li>
 					</li>
 				</ul>
+
+				<ul class="nav">
+					<li class="nav-item nav-dropdown">
+							<a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-users fa-lg mt-1"></i>Cadastros</a>
+							<ul class="nav-dropdown-items">
+						<li class="nav-item">
+							<a class="nav-link" href="/cadastros/adicionar"><i class="fa fa-address-book-o fa-lg mt-1"></i> Adicionar</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/cadastros/lista">
+							<i class="fa fa-list fa-lg mt-1"></i> Listar</a>
+						</li>
+					</li>
+				</ul>
+
+				<ul class="nav">
+					<li class="nav-item nav-dropdown">
+							<a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-calculator fa-lg mt-1"></i>Pedidos</a>
+							<ul class="nav-dropdown-items">
+						<li class="nav-item">
+							<a class="nav-link" href="/pedidos/adicionar"><i class="fa fa-address-book-o fa-lg mt-1"></i> Adicionar</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/pedidos/lista">
+							<i class="fa fa-list fa-lg mt-1"></i> Listar</a>
+						</li>
+					</li>
+				</ul>
 			</nav>
 			<button class="sidebar-minimizer brand-minimizer" type="button"></button>
 		</div>
@@ -85,12 +120,7 @@
      
     </footer>
     <!-- CoreUI and necessary plugins-->
-    <script src="/js/vendor/jquery.min.js"></script>
-    <script src="/js/vendor//popper.min.js"></script>
-    <script src="/js/vendor/bootstrap.min.js"></script>
-    <script src="/js/vendor/pace.min.js"></script>
-    <script src="/js/vendor/perfect-scrollbar.min.js"></script>
-	<script src="/js/vendor/coreui.min.js"></script>
+
 	
 	
   </body>

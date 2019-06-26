@@ -26,6 +26,16 @@ Route::get('/pousadas/FormUpdate/{id}','PousadasController@form_update');
 Route::post('/pousadas/update', 'PousadasController@update');
 Route::get('/pousadas/filtra', 'PousadasController@filter');
 
+///cadastros 
+Route::get('/cadastros/adicionar','CadastrosController@form_adicionar');
+Route::post('/cadastros/insert','CadastrosController@insert');
+Route::get('/cadastros/lista','CadastrosController@list');
+Route::get('/cadastros/remove/{id}', 'CadastrosController@delete');
+Route::get('/cadastros/display/{id}', 'CadastrosController@display');
+Route::get('/cadastros/FormUpdate/{id}','CadastrosController@form_update');
+Route::post('/cadastros/update', 'CadastrosController@update');
+Route::get('/cadastros/filtra', 'CadastrosController@filter');
+
 //site
 Route::get('/index', 'SiteController@index');
 Route::get('/index/filtra', 'SiteController@filter');

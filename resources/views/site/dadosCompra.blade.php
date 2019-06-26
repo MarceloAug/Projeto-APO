@@ -111,7 +111,7 @@ function atualiza(){
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="inputCEP">Numero do cartão de credito </label>
+                                <label for="cartaoCredito">Numero do cartão de credito </label>
                                 <input required type="text" class="form-control" id="cartaoCredito" name="cartaoCredito" maxlength="30">
                             </div>
                       
