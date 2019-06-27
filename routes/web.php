@@ -41,6 +41,15 @@ Route::get('/cadastros/FormUpdate/{id}','CadastrosController@form_update');
 Route::post('/cadastros/update', 'CadastrosController@update');
 Route::get('/cadastros/filtra', 'CadastrosController@filter');
 
+//pedidos
+Route::get('/pedidos/adicionar','PedidosController@form_adicionar');
+Route::get('/pedidos/listar','PedidosController@list');
+Route::post('/pedidos/insert','PedidosController@insert');
+Route::get('/pedidos/filtra', 'PedidosController@filter');
+Route::post('/pedidos/confirm','PedidosController@confirm');
+Route::get('/pedidos/display/{id}', 'PedidosController@display');
+Route::get('/pedidos/remove/{id}', 'PedidosController@delete');
+
 
 
 

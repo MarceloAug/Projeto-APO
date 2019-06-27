@@ -15,8 +15,11 @@
 		<link href="/css/flag-icon.min.css" rel="stylesheet">
 		<link href="/css/font-awesome.min.css" rel="stylesheet">
 		<link href="/css/simple-line-icons.css" rel="stylesheet">
+		<link href="/css/iziToast.min.css " rel="stylesheet">
+		<script src="/js/iziToast.min.js" type="text/javascript"></script>
 		<script src="/js/jquery.min.js" type="text/javascript"></script>
         <script src="/js/jquery.mask.js" type="text/javascript"></script>
+		<script src="/js/moment.min.js"></script>
 		<script src="/js/vendor//popper.min.js"></script>
 		<script src="/js/vendor/bootstrap.min.js"></script>
 		<script src="/js/vendor/pace.min.js"></script>
@@ -90,7 +93,7 @@
 							<a class="nav-link" href="/pedidos/adicionar"><i class="fa fa-address-book-o fa-lg mt-1"></i> Adicionar</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="/pedidos/lista">
+							<a class="nav-link" href="/pedidos/listar">
 							<i class="fa fa-list fa-lg mt-1"></i> Listar</a>
 						</li>
 					</li>

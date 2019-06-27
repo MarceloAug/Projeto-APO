@@ -10,7 +10,7 @@
         </div>
         
         <div class="card-body">
-        @if(empty($pousadas))
+        @if(empty($pedidos))
             <div class="alert alert-danger">
                 Não há pousadas cadastradas.
             </div>
@@ -36,28 +36,25 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Nome</th>
-                        <th>Valor</th>
-                        <th>Endereco</th>
-                        <th></th>
-                        <th></th>
-                        
+                        <th>pousada</th>
+                        <th>Cadastro</th>
+                        <th>Valor</th>    
+                        <th></th>    
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($pousadas as $e)
+                    @foreach ($pedidos as $e)
                         <tr>
-                            <td><a href="/pousadas/display/{{$e->id}}">{{$e->id}}</a></td>
-                            <td> {{$e->nome}} </td>
+                            <td><a href="/pedidos/display/{{$e->id}}">{{$e->id}}</a></td>
+                            <td> {{$e->pousada->nome}} </td>
+                            <td> {{$e->cadastro->nome}} </td>
                             <td> {{$e->valor}} </td>
-                            <td> {{$e->endereco}} </td>
-                            <td ><a href="/pousadas/remove/{{$e->id}}"><i class="fa fa-trash fa-lg mt-2"></i></a></td>
-                            <td ><a href="/pousadas/FormUpdate/{{$e->id}}"><i class="fa fa-edit fa-lg mt-2"></i></a></td>
+                            <td ><a href="/pedidos/remove/{{$e->id}}"><i class="fa fa-trash fa-lg mt-2"></i></a></td>
                         </tr>
                     @endforeach
                 </tbody>
             </table>
-                {{ $pousadas->links() }}
+                {{ $pedidos->links() }}
         </div>
     </div>
 </div>
