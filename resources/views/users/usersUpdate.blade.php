@@ -18,27 +18,25 @@
                 </ul>
                 </div>
             @endif
-            <form action="/usuarios/insert" method="POST">
+            <form action="/usuarios/update" method="POST">
                 <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
+                <input type="hidden" name="id" value="{{$usuario->id}}" />
                 <div class="form-group">
                     <label for="nome">Nome</label>
-                    <input class="form-control" name="name" id="nome" type="text" placeholder="nome">
+                    <input required class="form-control" name="name" id="nome" type="text" placeholder="nome" value="{{$usuario->name}}">
                 </div>
 
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input class="form-control" name="email" id="email" type="email" placeholder="email">
+                    <input required class="form-control" name="email" id="email" type="email" placeholder="email" value="{{$usuario->email}}">
                 </div>
 
                 <div class="form-group">
                     <label for="senha">Senha</label>
-                    <input class="form-control" type="password" placeholder="Senha" name="password">
+                    <input required class="form-control" type="password" placeholder="Senha" name="password" >
                 </div>
 
-                <div class="form-group">
-                    <label for="street">Repita a senha </label>
-                    <input class="form-control" type="password" placeholder="Digite a senha novamente" name="rpassword">
-                </div>
+               
                 <div class="card-footer">
                     <button class="btn btn-block btn-ghost-secondary active" type="submit"><i class="fa fa-dot-circle-o"></i> Adicionar</button>
                 </div>

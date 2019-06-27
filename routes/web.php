@@ -12,7 +12,12 @@ Route::get('/logout','LoginController@logout');
 //usuarios 
 Route::get('/usuarios/adicionar','usersController@form_adicionar');
 Route::get('/usuarios/listar','usersController@list');
-Route::post('/users/insert','usersController@insert');
+Route::post('/usuarios/insert','usersController@insert');
+Route::get('/usuarios/filtra', 'usersController@filter');
+Route::get('/usuarios/remove/{id}', 'usersController@delete');
+Route::get('/usuarios/FormUpdate/{id}', 'usersController@form_update');
+Route::post('/usuarios/update', 'usersController@update');
+
 
 
 
@@ -36,6 +41,10 @@ Route::get('/cadastros/FormUpdate/{id}','CadastrosController@form_update');
 Route::post('/cadastros/update', 'CadastrosController@update');
 Route::get('/cadastros/filtra', 'CadastrosController@filter');
 
+
+
+
+
 //site
 Route::get('/index', 'SiteController@index');
 Route::get('/index/filtra', 'SiteController@filter');
@@ -45,20 +54,3 @@ Route::post('/index/confirmacaoReserva', 'SiteController@Confirm');
 
 
 
-
-
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});

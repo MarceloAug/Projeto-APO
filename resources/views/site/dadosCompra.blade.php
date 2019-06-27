@@ -30,12 +30,13 @@ function atualiza(){
         });
       
         var periodoAte = $('#periodoAte').val("");
+        valorTotal.html('0.00' +'R$')
         return;
     }
 
     if(diff == 0){diff = 1;}
     var total = parseFloat(valorPousada) * parseInt(diff);
-    // if (typeof parseFloat(total).toFixed(2) === "undefined"){total = 0;}
+    //if (typeof parseFloat(total).toFixed(2) == "NaN"){total = 0;} 
     valorTotal.html(parseFloat(total).toFixed(2) +'R$');
 
 }
