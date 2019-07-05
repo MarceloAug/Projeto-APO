@@ -35,7 +35,7 @@
 			<button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<a class="navbar-brand" href="#"></a>
+			<span class="navbar-brand"></span>
 			<ul class="nav navbar-nav ml-auto">
 				<a href="/logout"><i class="fa fa-lock"></i> Logout</a>
 			</ul>
@@ -104,12 +104,7 @@
 		<main class="main">
 			<!-- Breadcrumb-->
 			<ol class="breadcrumb">
-				<li class="breadcrumb-item">Home</li>
-				<li class="breadcrumb-item">
-					<a href="#">Admin</a>
-				</li>
-				<li class="breadcrumb-item active">Dashboard</li>
-				<!-- Breadcrumb Menu-->
+				
 			</ol>
 			<div class="container-fluid"></div>
 				@yield('conteudo')

@@ -34,7 +34,7 @@ class PousadasController extends Controller
     public function filter(Request $request){
         $filtro = Input::get('filtro');
         $campo = Input::get('campo');
-        $pousadas = Pousada :: where($filtro,$campo)->get();
+        $pousadas = Pousada :: where($filtro,$campo)->paginate(10);
         return view('pousadas.pousadasList')->with('pousadas', $pousadas);
     }
 

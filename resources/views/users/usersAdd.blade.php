@@ -35,10 +35,10 @@
                     <input class="form-control" type="password" placeholder="Senha" name="password">
                 </div>
 
-                <div class="form-group">
+                {{--  <div class="form-group">
                     <label for="street">Repita a senha </label>
                     <input class="form-control" type="password" placeholder="Digite a senha novamente" name="rpassword">
-                </div>
+                </div>  --}}
                 <div class="card-footer">
                     <button class="btn btn-block btn-ghost-secondary active" type="submit"><i class="fa fa-dot-circle-o"></i> Adicionar</button>
                 </div>

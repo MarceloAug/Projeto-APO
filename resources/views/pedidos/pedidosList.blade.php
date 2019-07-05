@@ -15,13 +15,12 @@
                 Não há pousadas cadastradas.
             </div>
         @else
-            <form action="/pousadas/filtra" method="GET">
+            <form action="/pedidos/filtra" method="GET">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                 <div class="row">
                     <div class="form-group col-sm-2">
                         <select name="filtro" class="form-control">
                             <option value="id">ID</option>
-                            <option value="nome">Nome</option>
                         </select>
                     </div>
                     <div class="form-group col-sm-2">

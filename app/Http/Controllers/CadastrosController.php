@@ -32,8 +32,8 @@ class CadastrosController extends Controller
     public function filter(Request $request){
         $filtro = Input::get('filtro');
         $campo = Input::get('campo');
-        $cadastros = Cadastro :: where($filtro,$campo)->get();
-        return view('cadastros.cadastrosList')->with('cadastro', $cadastro);
+        $cadastros = Cadastro :: where($filtro,$campo)->paginate(10);
+        return view('cadastros.cadastrosList')->with('cadastros', $cadastros);
     }
 
 

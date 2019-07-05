@@ -87,5 +87,13 @@ class PedidosController extends Controller
 
     }
 
+    public function filter(Request $request){
+        $filtro = Input::get('filtro');
+        $campo = Input::get('campo');
+        $pedidos = Pedido :: where($filtro,$campo)->paginate(10);
+        return view('pedidos.pedidosList')->with('pedidos', $pedidos);
+    }
+
+
     
 }

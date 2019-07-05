@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Http\Requests\RegisterRequest;
+use Illuminate\Support\Facades\Input;
 Use Request;
 use App\User;
 use Hash;
@@ -23,13 +24,13 @@ class usersController extends Controller
         return view('users.usersAdd');
     }
 
-    public function insert(RegisterRequest $request){
+    public function insert(Request $request){
        
         $params = Request :: all();
         $params['password'] = Hash::make($params['password']);
         $User = new User($params);
         $User->save();
-        return view('users.userList');
+        return redirect('/usuarios/listar')->withInput();
         
     }
    
@@ -53,5 +54,13 @@ class usersController extends Controller
         $user->update($params);
         return redirect()->action('usersController@list');
     }
+
+    public function filter(Request $request){
+        $filtro = Input::get('filtro');
+        $campo = Input::get('campo');
+        $usuarios = User:: where($filtro,$campo)->paginate(10);
+        return view('users.usersList')->with('usuarios', $usuarios);
+    }
+
 
 }

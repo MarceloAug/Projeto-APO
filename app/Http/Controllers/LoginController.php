@@ -10,14 +10,14 @@ class LoginController extends Controller
 {
 	//método que leva para o formulário de login
     public function form(){
-        return view('Auth.form_login');
+        return view('auth.form_login');
     }
 
 
 
 	//método que leva para o formulário de registro
      public function form_register(){
-        return view('Auth.form_register');
+        return view('auth.form_register');
 	}
 
 	
@@ -30,7 +30,7 @@ class LoginController extends Controller
 			return view('users.usersAdd');
 		}
 
-		return view('Auth.form_login');
+		return view('auth.form_login');
 	}
 
 
@@ -53,9 +53,9 @@ class LoginController extends Controller
 			$params = $request->all();
 			$params['password'] = Hash::make($params['password']);
 			User::create($params);
-			return view('Auth.form_login');
+			return view('auth.form_login');
 		}else {
-			return view('Auth.form_register')->with('mensagem','Já existe esse e-mail cadastrado');
+			return view('auth.form_register')->with('mensagem','Já existe esse e-mail cadastrado');
 		}
 
        
